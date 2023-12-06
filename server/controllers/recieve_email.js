@@ -28,7 +28,7 @@ const recieveMail = async (req, res) => {
 
         transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
-                res.status(500).json({ message: err.message });
+                res.status(500).json({ message: err.message, });
             } else {
                 console.log('email sent');
                 res.status(200).json({ message: 'email sent', info });
